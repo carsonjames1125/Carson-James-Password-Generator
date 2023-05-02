@@ -5,23 +5,25 @@
 function generatePassword() {
   var uppercaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   var lowercaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',];
-  var numberCharacters = ['1','2','3','4','5','6','7','8','9','0'];
+  var numbers = ['1','2','3','4','5','6','7','8','9','0'];
   var specialCharacters = ['!','@','#','$','%','^','&','*','(',')','?','/','.',',','<','>','+',"="];
-  //var allPossibilities = [];
+  //var allPossibilities = []
 
 
 //begin with the prompt for the first portion of the password selection giving the user an option of the number of the characters between 8-128.
 
-var numberOfCharacters = prompt("Please choose your desired number of characters for your password. Please make sure the selection is between 8-128 characters.");
+numberOfCharacters = prompt("Please choose your desired number of characters for your password. Please make sure the selection is between 8-128 characters.");
 
 // an if statement needs to be created for the selection process to give the function meaning and logic if the user inputs between 8-128 characters prompt will state the alert, if the user inputs a number less then 8 and greater then 128 characters, the prompt will tell the reader to input the correct number of characters
 
 if (numberOfCharacters < 8 || numberOfCharacters > 128) {
-  return ("Please choose make sure to choose between 8-128 characters.");
+  prompt ("Please choose make sure to choose between 8-128 characters.");
 } else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Please choose a valid number from the given characters.");
 } else {
-  alert("Your password will be " + numberOfCharacters + " characters long.")
+  alert("This password will contain " + numberOfCharacters + " characters.")
+}
+
 }
 
 
@@ -63,18 +65,18 @@ if (hasUppercaseLetters === false && hasLowercaseLetters === false && hasNumbers
 
 // now that all of the prompts have been given alerts and given choices for the user, I need to generate possibilities within the slected parameters of the choices to begin the random generation of the password. 
 
-if (hasUppercaseLetters) {
+//if (hasUppercaseLetters) {
 
-}
-if (hasLowercaseLetters) {
+//}
+//if (hasLowercaseLetters) {
 
-}
-if (hasNumbers) {
+//}
+//if (hasNumbers) {
 
-}
-if (hasSpecialCharacters) {
+//}
+//if (hasSpecialCharacters) {
 
-}
+//}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
