@@ -7,7 +7,8 @@ function generatePassword() {
   var lowercaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',];
   var numbers = ['1','2','3','4','5','6','7','8','9','0'];
   var specialCharacters = ['!','@','#','$','%','^','&','*','(',')','?','/','.',',','<','>','+',"="];
-  //var allPossibilities = []
+  //var allPossibilities = [];
+}
 
 
 //begin with the prompt for the first portion of the password selection giving the user an option of the number of the characters between 8-128.
@@ -24,7 +25,6 @@ if (numberOfCharacters < 8 || numberOfCharacters > 128) {
   alert("This password will contain " + numberOfCharacters + " characters.")
 }
 
-}
 
 // Give the user an option to choose lowercase, uppercase, numbers, and/or special characters. 
 
