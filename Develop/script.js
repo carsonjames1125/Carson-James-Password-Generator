@@ -8,8 +8,6 @@ function generatePassword() {
   var numbers = ['1','2','3','4','5','6','7','8','9','0'];
   var specialCharacters = ['!','@','#','$','%','^','&','*','(',')','?','/','.',',','<','>','+',"="];
   var allPossibilities = [];
-}
-
 
 //begin with the prompt for the first portion of the password selection giving the user an option of the number of the characters between 8-128.
 
@@ -19,29 +17,37 @@ numberOfCharacters = prompt("Please choose your desired number of characters for
 
 if (numberOfCharacters < 8 || numberOfCharacters > 128) {
   prompt ("Please choose make sure to choose between 8-128 characters.");
-} else if (isNaN(numberOfCharacters)) {
+} 
+else if (isNaN(numberOfCharacters)) {
   numberOfCharacters = prompt("Please choose a valid number from the given characters.");
-} else {
-  alert("This password will contain " + numberOfCharacters + " characters.")
+} 
+else {
+  alert("This password will contain " + numberOfCharacters + " characters.");
+
 }
 
 // Give the user an option to choose lowercase, uppercase, numbers, and/or special characters. 
 
 //Uppercase prompt
+
 hasUppercaseLetters = confirm("Would you like Uppercase letters?");
 if (hasUppercaseLetters) {
-  alert ("Your password will include uppercase letters.");
+  var turnToUppercase = alert ("Your password will include uppercase letters.");
 } else {
   alert ("Your password will not include uppercase letters.");
 }
+
 //lowercase prompt
+
 hasLowercaseLetters  = confirm("Would you like lowercase letters?");
 if (hasLowercaseLetters) {
   alert ("Your password will include lowercase letters.");
 } else {
   alert ("Your password will not include lowercase letters.");
 }
+
 //Numbers prompt
+
 hasNumbers = confirm("Would you like numbers in your password?");
 if (hasNumbers) {
   alert ("Your password will include numbers.");
@@ -55,25 +61,42 @@ if (hasSpecialCharacters) {
 } else {
   alert ("This password will not include special characters.");
 }
+
 // if all prompts are declined, the prompt needs to return a message displaying that one of the prompts needs to be choosen so a password can be generated.
+
 if (hasUppercaseLetters === false && hasLowercaseLetters === false && hasNumbers === false && hasSpecialCharacters === false) {
   alert ("Please refresh and choose one of the following prompts to be included in the password.");
 }
 
 // now that all of the prompts have been given alerts and given choices for the user, I need to generate possibilities within the slected parameters of the choices to begin the random generation of the password. 
 
+//combining possibilities and uppercase letters array
 if (hasUppercaseLetters) {
-
+allPossibilities = allPossibilities.concat(uppercaseCharacters);
 }
+//combining possibilities and lowercase letter array
 if (hasLowercaseLetters) {
-
+allPossibilities = allPossibilities.concat(lowercaseCharacters);
 }
+//combining possibilities and numbers array
 if (hasNumbers) {
-
+allPossibilities = allPossibilities.concat(numbers);
 }
+//combining possibilities with special characters array
 if (hasSpecialCharacters) {
-
+allPossibilities = allPossibilities.concat(specialCharacters);
 }
+
+// now i need a function to randomize the prompts given and finally generate a password. 
+
+let givenPassword = ""
+for (let i =0; i < numberOfCharacters; i++) {
+  let rng =[Math.floor(Math.random() * allPossibilities.length)];
+  //allows the password to be conmbined using the random number generator of all possibilities of each array combined with the user input parameters. 
+  givenPassword = givenPassword + allPossibilities[rng];
+}
+ return givenPassword;
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
