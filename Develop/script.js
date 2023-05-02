@@ -26,8 +26,6 @@ if (numberOfCharacters < 8 || numberOfCharacters > 128) {
 
 }
 
-
-
 // Give the user an option to choose lowercase, uppercase, numbers, and/or special characters. 
 
 //Uppercase prompt
@@ -65,18 +63,6 @@ if (hasUppercaseLetters === false && hasLowercaseLetters === false && hasNumbers
 
 // now that all of the prompts have been given alerts and given choices for the user, I need to generate possibilities within the slected parameters of the choices to begin the random generation of the password. 
 
-//if (hasUppercaseLetters) {
-
-//}
-//if (hasLowercaseLetters) {
-
-//}
-//if (hasNumbers) {
-
-//}
-//if (hasSpecialCharacters) {
-
-//}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
