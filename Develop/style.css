@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #000306;
+  background-color: #0780f9;
 }
 
 .wrapper {
@@ -112,7 +112,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #000204;
+  border: 2px dashed #000207;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
