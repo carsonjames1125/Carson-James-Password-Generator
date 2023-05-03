@@ -11,7 +11,7 @@ function generatePassword() {
   var specialCharacters = ['!','@','#','$','%','^','&','*','(',')','?','/','.',',','<','>','+',"="];
   var allPossibilities = [];
 
-//begin with the prompt for the first portion of the password selection giving the user an option of the number of the characters between numbers 8-128.
+//begin with the prompt for the first portion of the password selection giving the user an option of the number of the characters between 8-128.
 
 let numberOfCharacters = prompt("Please choose your desired number of characters for your password. Please make sure the selection is between 8-128 characters.");
 
@@ -70,9 +70,10 @@ if (hasSpecialCharacters === "yes" || hasSpecialCharacters === "Yes" || hasSpeci
 }
 
 // if all prompts are declined, the prompt needs to return a message displaying that one of the prompts needs to be choosen so a password can be generated properly.
-
-if (hasUppercaseLetters === false && hasLowercaseLetters === false && hasNumbers === false && hasSpecialCharacters === false) {
+// fixed the function to return a null value if all prompts are answered as false.
+if (hasUppercaseLetters === "no" || "No" || "NO" && hasLowercaseLetters === "no"|| "No" || "NO" && hasNumbers === "no" || "No" || "NO"&& hasSpecialCharacters === "no"|| "No" || "NO") {
   alert ("Please return, click the 'Generate Password' button and try again.");
+  return null;
 }
 
 //
