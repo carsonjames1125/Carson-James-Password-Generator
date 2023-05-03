@@ -19,12 +19,12 @@
 
 ## Credits
 ---
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+ - https://ondrej-kvasnovsky.medium.com/javascript-13-conditional-if-else-d8f482d647f8
+ - https://www.w3schools.com/jsref/jsref_return.asp
+ - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+ - https://stackoverflow.com/questions/40606697/how-do-i-loop-back-to-the-prompt-if-answer-is-incorrect-javascript
+ - https://www.samanthaming.com/tidbits/15-4-ways-to-combine-strings/
+ - https://stackoverflow.com/questions/20796324/return-a-value-from-a-javascript-function-without-using-return
 
 ## License
 ---
