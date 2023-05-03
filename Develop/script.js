@@ -77,8 +77,6 @@ if (hasUppercaseLetters === ("no","No","NO") && hasLowercaseLetters === ("no","N
   return null;
 }
 
-//
-
 // now that all of the prompts have been given alerts and given choices for the user, I need to generate possibilities within the selected parameters of the choices to begin the random generation of the password. 
 
 //combining possibilities and uppercase letters array
@@ -102,9 +100,9 @@ allPossibilities = allPossibilities.concat(specialCharacters);
 
 let givenPassword = ""
 for (let i =0; i < numberOfCharacters; i++) {
-  let rng =[Math.floor(Math.random() * allPossibilities.length)];
+  let randomNumber =[Math.floor(Math.random() * allPossibilities.length)];
   //allows the password to be combined using the random number generator of all possibilities of each array combined with the user input parameters. 
-  givenPassword = givenPassword + allPossibilities[rng];
+  givenPassword = givenPassword + allPossibilities[randomNumber];
 }
  return givenPassword;
 };
