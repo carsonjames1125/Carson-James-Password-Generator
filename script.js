@@ -72,9 +72,9 @@ if (hasSpecialCharacters === "yes" || hasSpecialCharacters === "Yes" || hasSpeci
 // if all prompts are declined, the prompt needs to return a message displaying that one of the prompts needs to be choosen so a password can be generated properly.
 // fixed the function to return a null value if all prompts are answered as false.
 
-if (hasUppercaseLetters === ("no","No","NO") && hasLowercaseLetters === ("no","No","NO") && hasNumbers === ("no","No","NO") && hasSpecialCharacters === ("no","No","NO")) {
+if (hasUppercaseLetters === "no" && hasLowercaseLetters === "no" && hasNumbers === "no" && hasSpecialCharacters === "no") {
   alert ("Please return, click the 'Generate Password' button and try again.");
-  return null;
+   return null;
 }
 
 // now that all of the prompts have been given alerts and given choices for the user, I need to generate possibilities within the selected parameters of the choices to begin the random generation of the password. 
