@@ -33,7 +33,7 @@ else {
 //Uppercase prompt
 //making prompts more interactive
 
- let hasUppercaseLetters = prompt("Would you like Uppercase letters?");
+ let hasUppercaseLetters = prompt("Would you like Uppercase letters? Yes or No?");
   if (hasUppercaseLetters === "yes" || hasUppercaseLetters === "Yes" || hasUppercaseLetters === "YES") {
     confirm ("Your password will include uppercase letters.");
 } else {
